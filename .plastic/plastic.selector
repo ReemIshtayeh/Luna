@@ -1,0 +1,4 @@
+repository "2D tutorial1/2D tutorial1@18968118412285@cloud"
+  path "/"
+    br "/main"
+    co "/main"
