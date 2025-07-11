@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Floor
   layers:
   - Default
   - TransparentFX
@@ -11,7 +12,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Ground
   - 
   - 
   - 
@@ -38,6 +39,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 134901525
+    locked: 0
+  - name: Clouds
+    uniqueID: 2341380045
+    locked: 0
+  - name: Mountain
+    uniqueID: 869763677
+    locked: 0
+  - name: Cloud2
+    uniqueID: 2721028017
+    locked: 0
+  - name: Building
+    uniqueID: 115211589
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
