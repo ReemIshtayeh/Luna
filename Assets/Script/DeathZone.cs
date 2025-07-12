@@ -21,7 +21,7 @@ public class DeathZone : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             // Restart the first stage
-            SceneManager.LoadScene("Stage0"); // <-- Replace with exact scene name
+            SceneManager.LoadScene("Stage0");
         }
     }
 }

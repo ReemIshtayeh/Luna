@@ -138,7 +138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &147358071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8676,6 +8676,7 @@ GameObject:
   - component: {fileID: 1670789330502013255}
   - component: {fileID: 2073024874}
   - component: {fileID: 1670789330502013260}
+  - component: {fileID: 1670789330502013261}
   - component: {fileID: 1670789330502013257}
   - component: {fileID: 1670789330502013259}
   m_Layer: 0
@@ -9013,13 +9014,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07be8224538145244b0b54a1bafa96e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 8
+  jumpPower: 40
   rb: {fileID: 1670789330502013259}
-  groundCheck: {fileID: 1789400151}
+  groundCheck: {fileID: 1902563028}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  longJumpingPowerMultiplier: 1
-  longJumpGravityScale: 0.5
+--- !u!114 &1670789330502013261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569652438590458148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b5b57b21a41e0147a6334dca1d7daaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  longJumpMultiplier: 1.5
+  longJumpGravityScale: 0.4
+  groundCheck: {fileID: 1902563028}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!212 &1695259586202846668
 SpriteRenderer:
   m_ObjectHideFlags: 0
