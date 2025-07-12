@@ -932,15 +932,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07be8224538145244b0b54a1bafa96e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
-  jumpingPower: 40
-  longJumpingPowerMultiplier: 1
-  longJumpGravityScale: 0.5
   rb: {fileID: 622193045}
   groundCheck: {fileID: 5359562603806069447}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  longJumpingPowerMultiplier: 1
+  longJumpGravityScale: 0.5
 --- !u!95 &622193048
 Animator:
   serializedVersion: 5
@@ -1254,7 +1252,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1098371714
 BoxCollider2D:
   m_ObjectHideFlags: 0

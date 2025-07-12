@@ -1,15 +1,14 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DeathZone : MonoBehaviour
 {
-    [SerializeField] private float riseSpeed = 2f;
-    [SerializeField] private Transform respawnPoint;
-
-    private Vector3 startPosition; // Stores where the death zone starts
+    [SerializeField] private float riseSpeed = 0.2f;
+    private Vector3 startPosition;
 
     private void Start()
     {
-        startPosition = transform.position; // Save the original position at scene start
+        startPosition = transform.position;
     }
 
     private void Update()
@@ -21,16 +20,8 @@ public class DeathZone : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // Respawn the player
-            other.transform.position = respawnPoint.position;
-
-            // Reset player velocity if they have a Rigidbody2D
-            Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
-            if (rb != null)
-                rb.velocity = Vector2.zero;
-
-            // Reset the death zone to its start position
-            transform.position = startPosition;
+            // Restart the first stage
+            SceneManager.LoadScene("Stage0"); // <-- Replace with exact scene name
         }
     }
 }
