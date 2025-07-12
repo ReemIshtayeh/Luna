@@ -18,7 +18,9 @@ public class SceneControler : MonoBehaviour
     }
     public void NextLevel()
     {
+        //  AudioManager.Instance.PlayWinSFX(); // 🔊 Play win sound
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+        
     }
 
     public void LoadScene(string sceneName)

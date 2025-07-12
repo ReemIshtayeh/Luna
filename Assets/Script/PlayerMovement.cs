@@ -53,8 +53,10 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpPower);
         animator.SetTrigger("Jump");
-        animator.SetTrigger("OneJump");
-        animator.SetBool("IsFlying", true);
+        //animator.SetTrigger("OneJump");
+        // 🔊 Play jump sound here:
+        AudioManager.Instance.PlayJumpSFX();
+        //animator.SetBool("IsFlying", true);
     }
 
     private bool IsGrounded()
@@ -70,6 +72,7 @@ public class PlayerMovement : MonoBehaviour
             Vector3 scale = transform.localScale;
             scale.x *= -1;
             transform.localScale = scale;
+            
         }
     }
 }

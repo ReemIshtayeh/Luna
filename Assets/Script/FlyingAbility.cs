@@ -62,6 +62,8 @@ public class FlyingAbility : MonoBehaviour
     {
         if (other.CompareTag("Butterfly"))
         {
+            //play picked sound
+            AudioManager.Instance.PlayPickedSFX();
             hasFlying = true;
             Destroy(other.gameObject);
             Debug.Log("🦋 Flying ability unlocked!");
