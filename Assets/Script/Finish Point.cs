@@ -15,18 +15,21 @@ public class FinishPoint : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (triggered) return;
+          triggered = true;
 
-        if (collision.CompareTag("Player"))
-        {
-            triggered = true;
+    // 🔇 Disable fog
+    DeathZone fog = FindObjectOfType<DeathZone>();
+    if (fog != null)
+    {
+        fog.DisableFog();
+        Debug.Log("☁️ DeathZone disabled");
+    }
 
-            // Show and play the transition video
-            videoUI.SetActive(true);
-            videoPlayer.Play();
+    // Show and play the transition video
+    videoUI.SetActive(true);
+    videoPlayer.Play();
 
-            StartCoroutine(WaitForVideoToEnd());
-        }
+    StartCoroutine(WaitForVideoToEnd());
     }
 
     private IEnumerator WaitForVideoToEnd()

@@ -16,6 +16,11 @@ public class DeathZone : MonoBehaviour
     {
         startPosition = transform.position;
     }
+    public void DisableFog()
+{
+    this.enabled = false;  // disables Update + OnTriggerEnter2D
+}
+
 
     private void Update()
     {
